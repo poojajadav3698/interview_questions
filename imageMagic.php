@@ -26,6 +26,6 @@ class imageMagic
     }
     public function isValidPath()
     {
-        return file_exists($this->image_magic_path);
+        return file_exists($this->image_magic_path) && is_readable($this->image_magic_path);
     }
 }
