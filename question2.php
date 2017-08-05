@@ -23,6 +23,8 @@ if(PHP_OS === "Linux")
 			"output.png"
 		);
 
+		//get ImageMagic Path
+		//$command = $image_magic_obj->getImageMagicPath();
 		//get base path
 		$command = $command_obj->getBaseCommand();
 		//get original file path
@@ -33,7 +35,7 @@ if(PHP_OS === "Linux")
 		$command .= $command_obj->getTargetPath();
 
 		//run the command
-		$output = shell_exec($command);
+		$output = $command_obj->execute($command);
 
 		return $output;
 	}
