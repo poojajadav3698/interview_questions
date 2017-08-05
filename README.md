@@ -16,9 +16,12 @@ I have created a sample answer for this and uploaded as question1.php. you can f
 ### Question 3
 ##### Can you provide 2 or 3 samples of PHP code that you are particularly proud of – and explain why – maybe it solved a difficult problem, maybe it was a unique way to work-around a limitation, maybe it was just something you finally worked out after many hours of frustration!
 I would like to share a recent blog I wrote regarding simple rules of writing codes.
-Use following link to open it.
+Use the following link to open it.
 https://github.com/vidurac/interview_questions/blob/master/simple-rule-for-simpler-code.md 
 
+Further, I would like to add the URL's of my repositories
+ https://github.com/vidurac/silex
+ https://github.com/vidurac/simplifya 
 
       
       
