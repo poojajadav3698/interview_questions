@@ -20,8 +20,8 @@ Use the following link to open it.
 https://github.com/vidurac/interview_questions/blob/master/simple-rule-for-simpler-code.md 
 
 Further, I would like to add the URL's of my repositories
- https://github.com/vidurac/silex
- https://github.com/vidurac/simplifya 
+ #####https://github.com/vidurac/silex
+ #####https://github.com/vidurac/simplifya 
 
       
       
