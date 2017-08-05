@@ -10,7 +10,7 @@
 /**
  * Class command
  */
-class command
+class Command
 {
     /**
      * @var $base_command - this represents the basic command. Ex : convert.
@@ -39,7 +39,8 @@ class command
      * @param $params
      * @param $target_path
      */
-    public function __construct ($base_command,$origin_path,$params,$target_path) {
+    public function __construct($base_command, $origin_path, $params, $target_path)
+    {
         $this->base_command = $base_command;
         $this->origin_path = $origin_path;
         $this->params = $params;
