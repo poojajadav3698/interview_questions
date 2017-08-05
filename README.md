@@ -11,7 +11,7 @@ I have created a sample answer for this and uploaded as question1.php. you can f
       
       “c:\tools\imagemagick.exe convert -limit memory 0 -limit map 0 -quiet c:\data\test.jpeg[0] -thumbnail @11000 -quality 50 c:\data\output.jpeg” on Windows
       
-  ####Please also consider the performance of executing this command a few times in one process.
+  #### Please also consider the performance of executing this command a few times in one process.
       
 ### Question 3
 ##### Can you provide 2 or 3 samples of PHP code that you are particularly proud of – and explain why – maybe it solved a difficult problem, maybe it was a unique way to work-around a limitation, maybe it was just something you finally worked out after many hours of frustration!
