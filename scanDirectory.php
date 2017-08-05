@@ -8,24 +8,58 @@
  */
 class ScanDirectory
 {
-    private $dir_path;
+    private $directoryPath;
 
-    public function __construct($dir_path)
+    /**
+     * ScanDirectory constructor.
+     * @param $directoryPath - path of the directory
+     */
+    public function __construct($directoryPath)
     {
-        $this->dir_path = $dir_path;
+        $this->directoryPath = $directoryPath;
     }
 
+    /**
+     * Function isValidPath
+     * @return bool
+     */
     public function isValidPath()
     {
-        return file_exists($this->dir_path) && is_readable($this->dir_path);
+        return file_exists($this->directoryPath) && is_readable($this->directoryPath);
     }
 
-    public function loadFiles()
+    /**
+     * Function printAllFilesAndDirectories
+     * @return array
+     */
+    public function printAllFilesAndDirectories()
     {
-        return array_diff(scandir($this->dir_path), array('..', '.'));
+        if (!$this->isValidPath()) {
+            return "Invalid file path.";
+        }
+        return $this->dirToArray($this->directoryPath);
     }
-    public function isDirectory($name)
+
+    /**
+     * Function dirToArray
+     *
+     * @param $dir
+     * @param array $results
+     * @return array
+     */
+    public function dirToArray($dir, &$results = array())
     {
-        return is_dir($this->dir_path. DIRECTORY_SEPARATOR . $name);
+        $files = scandir($dir);
+
+        foreach ($files as $key => $value) {
+            $path = realpath($dir . DIRECTORY_SEPARATOR . $value);
+            if (!is_dir($path)) {
+                $results[] = $path . '(file)';
+            } else if ($value != "." && $value != "..") {
+                $this->dirToArray($path, $results);
+                $results[] = $path . '(dir)';
+            }
+        }
+        return $results;
     }
 }

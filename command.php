@@ -82,4 +82,9 @@ class Command
     {
         return $this->target_path;
     }
+
+    public function execute($command)
+    {
+        return shell_exec($command);
+    }
 }

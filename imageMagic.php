@@ -31,4 +31,9 @@ class ImageMagic
     {
         return file_exists($this->image_magic_path) && is_readable($this->image_magic_path);
     }
+
+    public function isFileExist()
+    {
+        return file_exists($this->image_magic_path);
+    }
 }
