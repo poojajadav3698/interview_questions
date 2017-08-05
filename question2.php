@@ -36,9 +36,8 @@ if (PHP_OS === "Linux") {
         $output = $command_obj->execute($command);
 
         return $output;
-    } else {
-        return "Could not found image magic executable path.";
     }
+    return "Could not found image magic executable path.";
 
 } else if (PHP_OS === "Windows") {
     $image_magic_obj = new ImageMagic("c:\tools\imagemagick.exe");
@@ -68,8 +67,7 @@ if (PHP_OS === "Linux") {
         $output = $command_obj->execute($command);
 
         return $output;
-    } else {
-        return "Could not found image magic executable file.";
     }
+    return "Could not found image magic executable file.";
 }
 ?>
