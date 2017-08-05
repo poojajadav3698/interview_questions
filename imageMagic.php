@@ -17,21 +17,37 @@ class ImageMagic
      */
     private $image_magic_path;
 
+    /**
+     * ImageMagic constructor.     *
+     * @param $image_magic_path
+     */
     public function __construct($image_magic_path)
     {
         $this->image_magic_path = $image_magic_path;
     }
 
+    /**
+     * Function - getImageMagicPath     *
+     * @return mixed
+     */
     public function getImageMagicPath()
     {
         return $this->image_magic_path;
     }
 
+    /**
+     * Function - isValidPath
+     * @return bool
+     */
     public function isValidPath()
     {
         return file_exists($this->image_magic_path) && is_readable($this->image_magic_path);
     }
 
+    /**
+     * Function - isFileExist     *
+     * @return bool
+     */
     public function isFileExist()
     {
         return file_exists($this->image_magic_path);

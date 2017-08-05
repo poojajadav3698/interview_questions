@@ -83,6 +83,11 @@ class Command
         return $this->target_path;
     }
 
+    /**
+     * Function - execute
+     * @param $command
+     * @return string
+     */
     public function execute($command)
     {
         return shell_exec($command);
